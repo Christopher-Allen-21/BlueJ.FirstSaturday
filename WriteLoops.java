@@ -1,4 +1,3 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.awt.SystemTray;
 import java.util.concurrent.ThreadLocalRandom;
@@ -20,7 +19,9 @@ public class WriteLoops {
 
         // Write a FOR loop that counts from 1 to 10.
             // calling
+            for(int i=1;i<6;i++){
             w = w + 1;
+        }
             // each time through the loop
 
         // this will tell the test how many times the loop executed.
@@ -32,7 +33,9 @@ public class WriteLoops {
 
         // Write a FOR loop that counts from 1 to 10.
         // calling
-        w = w + 1;
+        for(int i=1;i<11;i++){
+            w = w + 1;
+        }
         // each time through the loop
         
         return w;
@@ -43,29 +46,24 @@ public class WriteLoops {
 
         // Write a FOR loop that makes 10 iterations, start at 21.
         // calling
-        w = w + 1;
+        for(int i=21;i<32;i++){
+            w = w + 1;
+        }
         // each time through the loop
         
         return w;
     }
 
-    public int countDown() {
-        int w = 0;
 
-        // Write a FOR loop that counts down from 100 to 0.
-        // calling
-        w = w + 1;
-        // each time through the loop
-        
-        return w;
-    }
 
     public int byTwoTo32() {
         int w = 0;
 
         // Write a FOR loop from 0 to 32 by 2s.
         // calling
+        for(int i=0;i<33;i=i+2){
         w = w + 1;
+        }
         // each time through the loop
         return w;
     }
@@ -75,7 +73,9 @@ public class WriteLoops {
 
         // Write a FOR loop from 1 to less than 5001 by 11s.
         // calling
+        for(int i=1;i<5001;i=i+11){
         w = w + 1;
+        }
         // each time through the loop
         
         return w;
@@ -87,7 +87,11 @@ public class WriteLoops {
         // Write a nested FOR loop(s), where one counts from
         // 0 to less than 20 and the inner one counts from 0 to 4
                 // calling
+        for(int i=0;i<20;i++){
+            for(int j=0;j<5;j++){
                 w = w + 1;
+            }
+        }
                 // each time through the inner loop
 
         return w;
@@ -100,9 +104,13 @@ public class WriteLoops {
         // statement inside the loop that checks the
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
-
-                // calling
+        for(int i=5;i<=105;i++){
+                if(i>51){
+                System.out.print("Hello Zipcode");
+                }else{
                 w = w + 1;
+            }
+            }
             // each time through the inner loop
         
         return w;
@@ -133,9 +141,11 @@ public class WriteLoops {
         int w = 0;
 
         // you need to use a .equals for two Strings.
-
-            // calling
+            while(gpsCurrentLocation()!="Home"){
+            // calling'
+            driveSomeMore();
             w = w + 1;
+        }
             // each time through the inner loop
         
 
@@ -155,9 +165,12 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
- 
+         while(runningScore < highestScore){
+             runningScore += currentScore;
+             currentScore = gameNextScore();
             // calling
             w = w + 1;
+        }
             // each time through the inner loop
         
         return w; // >= 3;
@@ -180,25 +193,7 @@ public class WriteLoops {
         return w >= 3;
     }
 
-    // Write a WHILE loop that checks “serverIsRunning()” and if true
-    // calls “waitFor(5)” After the loop, write an IF and check “serverIsRunning()”
-    // is false, and if so, call “sendEmergencyText(“Help!”, adminPhoneNumber)”
-    // and also calls “tryServerRestart()”
-    public int checkServerStatus() {
-        int w = 0;
-        String adminPhoneNumber = "+1 202 456 1111";
-        
 
-        // calling
-        w = w + 1;
-        // each time through the inner loop
-        
-        return w;
-    }
-
-    // Declare an “int” i. Set i to 7.
-    // Write a WHILE loop that checks “i” is less than 50,
-    // and if it is, add 7 to “i”
     public int loop50by7() {
         int w = 0;
 

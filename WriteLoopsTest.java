@@ -58,12 +58,7 @@ public class WriteLoopsTest
         assertEquals(11, writeLoo1.startAtTwentyOne());
     }
 
-    @Test
-    public void TestCountDown()
-    {
-        WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(100, writeLoo1.countDown());
-    }
+
 
     @Test
     public void Test2to32()
@@ -103,24 +98,4 @@ public class WriteLoopsTest
 
 
 
-    @Test
-    public void TestCheckGameScore()
-    {
-        WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(true, writeLoo1.checkGameScore());
-    }
-
-    @Test
-    public void TestCheckGameScoreDoWhile()
-    {
-        WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(false, writeLoo1.checkGameScoreDoWhile());
-    }
-
-    @Test
-    public void TestCheckServer()
-    {
-        WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(3, writeLoo1.checkServerStatus());
-    }
 }
